@@ -47,25 +47,31 @@
 #menuRight {
 	text-align: right;
 }
-.nav-item {
-	text-align: center;
-}
 .list-group { 
 	display: none;
 	text-align: center;
 	position: absolute;
 	z-index: 1;
 	font-size: 17px;
+	width: 200px;
 }
 .nav-item:hover .list-group {
 	display: block;
+}
+.nav-item > .list-group {
+	text-align: center;
+}
+.border {
+	height: 4.5px;
+	background-color: #0B2161;
+	margin-top: 3px;
 }
 </style>
 </head>
 <body>
 
 <div id="header" class="container">
-
+	<div class="border"></div>
 	<div id="topLink" class="">
 		<a href="#">로그인</a>
 		<span>&nbsp; | &nbsp;</span>
@@ -127,7 +133,7 @@
 			<a id="myPage"><i class="far fa-user"></i></a>
 		</div>
 	</div> <!-- 헤더메인메뉴 끝 -->
-	
+	<div class="border"></div>
 </div> <!-- 컨테이너 끝 -->
 </body>
 

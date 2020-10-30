@@ -3,9 +3,13 @@
 <%@ include file="header.jsp"%>
 <head>
 <style type="text/css">
+.setSize{
+width:1200px;
+}
 .subTitle{
 text-decoration: underline;
 font-size: 30px;
+margin: 30px;
 }
 .book{
 float:left; 
@@ -42,7 +46,7 @@ text-align: center;
 background-color: #0B2161; 
 color:white; 
 width:200px; 
-height:50px;
+height:40px;
 margin-left:20px;
 border-left: 0px; 
 border-right: 0px; 
@@ -53,17 +57,14 @@ height:50px;
 line-height: 50px;
 }
 .circle {
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
     border-radius: 10px;
 }
 
 </style>
 </head>
 <body class="container">
-	<br>
+	<div class="setSize">
 	<center class="subTitle">박스오피스</center>
-	<br>
 	<!-- 상단 박스오피스 리스트 -->
 	<div class="row">
 		<div class="col-3 text-center">
@@ -125,6 +126,6 @@ line-height: 50px;
 	</div>
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	
-
+</div>
 </body>
 <%@ include file="footer.jsp"%>

@@ -22,7 +22,9 @@
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <style type="text/css">
 .container {
-	min-width: 1200px;
+	width: 1200px;
+	padding: 0;
+	margin: 0 auto;
 }
 a {
 	text-decoration: none;
@@ -35,6 +37,7 @@ a:hover {
 #header {
 	background-color: #0B2161;
 	position: relative;
+	padding: 10px 20px;
 }
 #mainLogo {
 	height: 100px;
@@ -42,23 +45,22 @@ a:hover {
     text-align: center;
     vertical-align: middle;
     margin: 0 auto;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 #logo {
 	width: 300px;
 }
 #topLink {
     text-align: right;
-    padding-top: 10px;
     position: absolute;
-    right: 10px;
+    padding-top: 5px;
+    right: 20px;
     width: 150px;
 }
 
 #mainMenu {
 	font-size: 20px;
-	color: white;	
-	padding-bottom: 5px;
+	color: white;
 }
 #menuRight {
 	text-align: right;
@@ -70,7 +72,7 @@ a:hover {
 	z-index: 1;
 	font-size: 15px;
 	width: 200px;
-	padding-top: 5px;
+	padding-top: 10px;
 }
 .nav-item:hover .list-group {
 	display: block;
@@ -82,7 +84,42 @@ a:hover {
 	background-color: #0B2161;
 	color: #FFFFFF;
 }
+#siteMap {
+	text-align: center;
+	border: 1px solid #BDBDBD;
+	background-color:white;
+	display: none;
+	position: absolute;
+	z-index: 1;
+}
+#siteMap th,td {
+	width: 150px;
+	height: 50px;
+	border-right: 1px solid #BDBDBD;
+	color: #0B2161;
+}
+#siteMap a {
+	color: black;
+}
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(function () {
+	$('#allMenu').click(function() {	//allMenu버튼 클릭하면 siteMap div나오게 하기
+		$('#allMenuIcon').toggleClass('fa-bars fa-times-circle');
+		$('#siteMap').toggle();
+	});
+	
+	$('#siteMap a').hover(function() {
+		$(this).parent().css('background-color','#0B2161');
+		$(this).css('color','white');
+	},function() {
+		$(this).parent().css('background-color','white');
+		$(this).css('color','black');
+	});
+	
+});
+</script>
 </head>
 <body>
 
@@ -101,7 +138,7 @@ a:hover {
 		<div class="col-sm-2">
 			<div class="row">
 				<div class="col-sm-4">
-					<a id="siteMap"><i class="fas fa-bars"></i></a>
+					<a id="allMenu"><i id="allMenuIcon" class="fas fa-bars"></i></a>
 				</div>
 				<div class="col-sm-4">
 					<a id="findMovie"><i class="fas fa-search"></i></a>
@@ -149,6 +186,68 @@ a:hover {
 		</div>
 	</div> <!-- 헤더메인메뉴 끝 -->
 </div> <!-- 컨테이너 끝 -->
+
+	<div class="container" >
+    	<table id="siteMap">
+                <tr>
+                    <th>영화</th>
+                    <th>예매</th>
+                    <th>극장</th>
+                    <th>이벤트</th>
+                    <th>나의 파크박스</th> 	<!-- 해당 라인 클릭시 로그인 여부 확인 -->
+                    <th>고객센터</th>
+                </tr>
+                <tr>
+                    <td><a href="#">박스오피스</a></td>
+                    <td><a href="#">빠른예매</a></td>
+                    <td><a href="#">전체극장</a></td>
+                    <td><a href="#">진행중이벤트</a></td>
+                    <td><a href="#">나의 파크박스 홈</a></td>
+                    <td><a href="#">고객센터 홈</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">상영예정작</a></td>
+                    <td><a href="#">상영시간표</a></td>
+                    <td><a href="#">특별관</a></td>
+                    <td><a href="#">지난이벤트</a></td>
+                    <td><a href="#">예매내역</a></td>
+                    <td><a href="#">공지사항</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="#">당첨자발표</a></td>
+                    <td><a href="#">멤버십포인트</a></td>
+                    <td><a href="#">1:1문의</a></td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="#">무비스토리</a></td>
+                    <td></td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="#">나의문의내역</a></td>
+                    <td></td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="#">회원정보수정</a></td>
+                    <td></td>
+                </tr>
+          </table>      
+    </div>
+
 </body>
 
 </html>

@@ -1,10 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>PARKBOX</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -20,24 +18,25 @@
 <!-- 아이콘 -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
 <style type="text/css">
+@font-face {
+      font-family: 'NanumSquare';
+      src: url('./NanumSquare_acR.ttf') format('truetype'), 
+}
 .container {
 	width: 1200px;
-	padding: 0;
+	padding: 30px 0;
 	margin: 0 auto;
+	font-family: 'NanumSquare';
 }
-a {
+
+a, a:link, a:visited, a:hover {
 	text-decoration: none;
-	color: #FFFFFF;
-}
-a:hover {
-	text-decoration: none;
-	color: #A9D0F5;
 }
 #header {
 	background-color: #0B2161;
-	position: relative;
-	padding: 10px 20px;
+	padding: 0 20px;
 }
 #mainLogo {
 	height: 100px;
@@ -45,19 +44,17 @@ a:hover {
     text-align: center;
     vertical-align: middle;
     margin: 0 auto;
-    padding-top: 10px;
-}
-#logo {
-	width: 300px;
 }
 #topLink {
     text-align: right;
-    position: absolute;
     padding-top: 5px;
-    right: 20px;
-    width: 150px;
 }
-
+#topLink a {
+	color: white;
+}
+#topLink a:hover {
+	color: #A9D0F5;
+}
 #mainMenu {
 	font-size: 20px;
 	color: white;
@@ -84,18 +81,24 @@ a:hover {
 	background-color: #0B2161;
 	color: #FFFFFF;
 }
-#siteMap {
+#siteMapWrap {
+	background-color: white;
 	text-align: center;
-	border: 1px solid #BDBDBD;
-	background-color:white;
 	display: none;
 	position: absolute;
 	z-index: 1;
+	width: 100%;
 }
-#siteMap th,td {
+#siteMap {
+	text-align: center;
+	border: 1px solid grey;
+	width: 1100px;
+	margin: 0 auto;
+}
+#siteMap th, #siteMap td {
 	width: 150px;
 	height: 50px;
-	border-right: 1px solid #BDBDBD;
+	border-right: 1px dotted grey;
 	color: #0B2161;
 }
 #siteMap a {
@@ -105,48 +108,54 @@ a:hover {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script type="text/javascript">
 $(function () {
-	$('#allMenu').click(function() {	//allMenu버튼 클릭하면 siteMap div나오게 하기
+	//allMenu버튼 클릭하면 siteMap div나오게 하기
+	$('#allMenu').click(function() {	
 		$('#allMenuIcon').toggleClass('fa-bars fa-times-circle');
-		$('#siteMap').toggle();
+		$('#siteMapWrap').toggle();
 	});
 	
-	$('#siteMap a').hover(function() {
+	//siteMap버튼 누르면 사이트맵 보였다가 안보였다가
+	$('#siteMap a').hover(function() {	
 		$(this).parent().css('background-color','#0B2161');
 		$(this).css('color','white');
 	},function() {
 		$(this).parent().css('background-color','white');
 		$(this).css('color','black');
 	});
-	
 });
 </script>
 </head>
 <body>
-
-<div id="header" class="container">
-	<div id="topLink" class="">
+<div ></div>
+<div id="header">
+<div class="container" style="padding: 10px 0;">
+	<!-- 로그인/회원가입 링크 -->
+	<div id="topLink">
 		<a href="#">로그인</a>
 		<span>&nbsp;&nbsp;</span>
 		<a href="#">회원가입</a>
 	</div>
-		
-	<div id="mainLogo" class="">
-		<a href="#"><img id="logo" src="./logow.png" alt="메인으로 가기"></a>
+	
+	<!-- 메인로고 -->
+	<div id="mainLogo">
+		<a href="#"><img id="logo" src="./logow.png" alt="메인으로 가기" width="300px"></a>
 	</div>
-
+	
+	<!-- 상단왼쪽아이콘(전체메뉴/영화검색) -->
 	<div id="mainMenu" class="row">
-		<div class="col-sm-2">
+		<div class="col-2">
 			<div class="row">
-				<div class="col-sm-4">
+				<div class="col-4">
 					<a id="allMenu"><i id="allMenuIcon" class="fas fa-bars"></i></a>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-4">
 					<a id="findMovie"><i class="fas fa-search"></i></a>
 				</div>
 			</div>
 		</div>
-
-		<div class="col-sm-8">
+		
+		<!-- 상단 주메뉴 -->
+		<div class="col-8">
 			<ul class="nav nav-pills nav-justified">
 				<li class="nav-item">
 					<a id="movie">영화</a>
@@ -180,14 +189,17 @@ $(function () {
 				</li>
 			</ul>
 		</div>
-
-		<div id="menuRight" class="col-sm-2">
+		
+		<!-- 마이페이지 아이콘 -->
+		<div id="menuRight" class="col-2">
 			<a id="myPage"><i class="far fa-user"></i></a>
 		</div>
 	</div> <!-- 헤더메인메뉴 끝 -->
 </div> <!-- 컨테이너 끝 -->
+</div> <!-- 헤더 끝 -->
 
-	<div class="container" >
+<!-- 사이트맵 -->
+	<div id="siteMapWrap" >
     	<table id="siteMap">
                 <tr>
                     <th>영화</th>

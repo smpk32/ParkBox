@@ -3,9 +3,6 @@
 <%@ include file="header.jsp"%>
 <head>
 <style type="text/css">
-.setSize{
-width:1200px;
-}
 .subTitle{
 text-decoration: underline;
 font-size: 30px;

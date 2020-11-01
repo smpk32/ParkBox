@@ -67,7 +67,9 @@ line-height: 50px;
 			</div>
 		</div>
 		<div class="col-3 text-center">
+			<a href="movieDetail.jsp">
 			<img alt="" src="" width="100%" height="400px" style="background-color: gray">
+			</a>
 			<div class="row boxmenu">
 				<div class="col-8 m-auto book circle">예매</div>
 				<div class="col-3 m-auto like-btn circle"><i class="far fa-heart" style="line-height:40px;"></i></div>

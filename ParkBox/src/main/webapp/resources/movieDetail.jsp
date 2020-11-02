@@ -68,7 +68,7 @@
 					</div>
 
 				</div>
-				<div class="row">
+				<div class="row mt-5">
 					<div class="col-3">
 						<h5>예매율</h5>
 					</div>

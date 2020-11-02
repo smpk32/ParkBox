@@ -32,10 +32,26 @@
 .HTag {
 	display: inline;
 }
-.nav-color{
-color:#0B2161;
+
+.nav-color {
+	color: #0B2161;
 }
 </style>
+<script>
+	$(function() {
+		$('.movie').each(function(index1, item) {
+			$(this).click(function() {
+				$('.carousel-item').each(function(index2, item) {
+					$(this).removeClass('active');
+					if (index1 == index2) {
+						$(this).addClass('active');
+					}
+				});
+
+			});
+		})
+	});
+</script>
 </head>
 <body>
 	<div class="container">
@@ -82,7 +98,7 @@ color:#0B2161;
 		</div>
 
 		<!-- 하단 영화 상세 -->
-		<ul class="nav nav-tabs">
+		<ul class="nav nav-tabs nav-justified pt-5">
 			<li class="nav-item"><a class="nav-link active nav-color"
 				data-toggle="tab" href="#information">주요 정보</a>
 				<p></p></li>
@@ -93,7 +109,7 @@ color:#0B2161;
 		</ul>
 		<div class="tab-content">
 			<!-- 첫번째 탭 -->
-			<div class="tab-pane fade show active" id="information">
+			<div class="tab-pane fade show active pt-3" id="information">
 				<div>
 					<h3>마이 드림 이즈 커리어우먼!</h3>
 					<br>
@@ -107,20 +123,204 @@ color:#0B2161;
 						하는지, 결정적 증거를 찾으려 한다. 불가능해 보이는 싸움, 세 친구는 해고의 위험을 무릅쓰고 고군분투를 시작하는데…
 						<br> 아이 캔 두 잇, 유 캔 두 잇, 위 캔 두 잇! 회사와 맞짱 뜨는 용감한 세 친구!
 					</p>
+					<hr>
 				</div>
+
 			</div>
-			<hr>
-			
-			
-			<div class="tab-pane fade" id="review">
-				<p>Nunc vitae turpis id nibh sodales commodo et non augue. Proin
-					fringilla ex nunc. Integer tincidunt risus ut facilisis tristique.</p>
+
+
+
+			<div class="tab-pane fade pt-3" id="review">
+				<div>
+					<!-- 관람평 입력 폼 -->
+					<div class="media border p-3">
+						<img src="img_avatar.PNG" alt="박상민"
+							class="mr-3 mt-3 rounded-circle" style="width: 60px;">
+						<div class="media-body">
+							<h4>
+								박 상민 <small><i>2020. 11. 02</i></small>
+							</h4>
+							<form>
+								<div class="row">
+									<textarea class="col-10 m-1" cols="100" rows="3"
+										style="resize: none;"></textarea>
+									<input class="col m-1 btn btn-outline-dark" type="submit"
+										value="관람평쓰기">
+								</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+				<h3 class="p-3">관람평</h3>
+				<!-- 관람평 1 -->
+				<div class="media border p-3 mb-2">
+					<img src="img_avatar.PNG" alt="박상민"
+						class="mr-3 mt-3 rounded-circle" style="width: 60px;">
+					<div class="media-body">
+						<h4>
+							박 상민 <small><i>2020. 11. 02</i></small>
+						</h4>
+						<p>재미있게 잘 봤습니다.</p>
+					</div>
+				</div>
+				<!-- 관람평 1 끝 -->
+				<!-- 관람평 2 -->
+				<div class="media border p-3 mb-2">
+					<img src="img_avatar.PNG" alt="박상민"
+						class="mr-3 mt-3 rounded-circle" style="width: 60px;">
+					<div class="media-body">
+						<h4>
+							박 소정 <small><i>2020. 11. 01</i></small>
+						</h4>
+						<p>아직 안봤지만 재밌네요.</p>
+					</div>
+				</div>
+				<!-- 관람평 2 끝 -->
+				<!-- 관람평 3 -->
+				<div class="media border p-3 mb-2">
+					<img src="img_avatar.PNG" alt="박상민"
+						class="mr-3 mt-3 rounded-circle" style="width: 60px;">
+					<div class="media-body">
+						<h4>
+							박 소희 <small><i>2020. 10. 30</i></small>
+						</h4>
+						<p>마이 드림 이즈 커리어우먼!.</p>
+					</div>
+				</div>
+				<!-- 관람평 3 끝 -->
+				<hr>
 			</div>
-			<div class="tab-pane fade" id="video">
-				<p>Curabitur dignissim quis nunc vitae laoreet. Etiam ut mattis
-					leo, vel fermentum tellus. Sed sagittis rhoncus venenatis. Quisque
-					commodo consectetur faucibus. Aenean eget ultricies justo.</p>
+
+			<!-- 예고편/스틸컷 -->
+			<div class="tab-pane fade pt-3" id="video">
+				<div class="container mt-3">
+
+					<h2>예고편</h2>
+					<div id="movieCarousel" class="carousel slide" data-ride="carousel"
+						data-interval="false">
+
+						<!-- Indicators -->
+						<ul class="carousel-indicators">
+							<li data-target="#movieCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#movieCarousel" data-slide-to="1"></li>
+							<li data-target="#movieCarousel" data-slide-to="2"></li>
+						</ul>
+
+						<!-- The slideshow -->
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<div class="d-flex justify-content-center mb-3">
+									<iframe width="700px" height="400px"
+										src="https://www.youtube.com/embed/Vg8VH4BH6uo"
+										frameborder="0"
+										allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen></iframe>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="d-flex justify-content-center mb-3">
+									<iframe width="700px" height="400px"
+										src="https://www.youtube.com/embed/9abWPuQNL-I"
+										frameborder="0"
+										allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen></iframe>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="d-flex justify-content-center mb-3">
+									<iframe width="700px" height="400px"
+										src="https://www.youtube.com/embed/iCnU-q5TULk"
+										frameborder="0"
+										allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+
+						<!-- Left and right controls -->
+						<a class="carousel-control-prev" href="#movieCarousel"
+							data-slide="prev"> <i
+							class="fas fa-chevron-circle-left fa-3x" style="color: black"></i>
+						</a> <a class="carousel-control-next" href="#movieCarousel"
+							data-slide="next"> <i
+							class="fas fa-chevron-circle-right fa-3x" style="color: black"></i>
+						</a>
+					</div>
+
+				</div>
+				<hr>
+				<button class="movie">
+					<img alt="" src="https://img.youtube.com/vi/Vg8VH4BH6uo/0.jpg"
+						width="150px" height="100px">
+				</button>
+				<button class="movie">
+					<img alt="" src="https://img.youtube.com/vi/9abWPuQNL-I/0.jpg"
+						width="150px" height="100px">
+				</button>
+				<button class="movie">
+					<img alt="" src="https://img.youtube.com/vi/iCnU-q5TULk/0.jpg"
+						width="150px" height="100px">
+				</button>
+				<hr>
+				<h2>스틸컷</h2>
+				<div class="row mt-3">
+					<div class="col-3 text-center">
+						<img alt="" src="" width="100%" height="150px"
+							style="background-color: gray">
+					</div>
+					<div class="col-3 text-center">
+						<img alt="" src="" width="100%" height="150px"
+							style="background-color: gray">
+					</div>
+					<div class="col-3 text-center">
+						<img alt="" src="" width="100%" height="150px"
+							style="background-color: gray">
+					</div>
+					<div class="col-3 text-center">
+						<img alt="" src="" width="100%" height="150px"
+							style="background-color: gray">
+					</div>
+				</div>
+				<div class="row mt-3">
+					<div class="col-3 text-center">
+						<img alt="" src="" width="100%" height="150px"
+							style="background-color: gray">
+					</div>
+					<div class="col-3 text-center">
+						<img alt="" src="" width="100%" height="150px"
+							style="background-color: gray">
+					</div>
+					<div class="col-3 text-center">
+						<img alt="" src="" width="100%" height="150px"
+							style="background-color: gray">
+					</div>
+					<div class="col-3 text-center">
+						<img alt="" src="" width="100%" height="150px"
+							style="background-color: gray">
+					</div>
+				</div>
+				<div class="row mt-3">
+					<div class="col-3 text-center">
+						<img alt="" src="" width="100%" height="150px"
+							style="background-color: gray">
+					</div>
+					<div class="col-3 text-center">
+						<img alt="" src="" width="100%" height="150px"
+							style="background-color: gray">
+					</div>
+					<div class="col-3 text-center">
+						<img alt="" src="" width="100%" height="150px"
+							style="background-color: gray">
+					</div>
+					<div class="col-3 text-center">
+						<img alt="" src="" width="100%" height="150px"
+							style="background-color: gray">
+					</div>
+				</div>
+				<hr>
 			</div>
+			<!-- 예고편 끝 -->
 		</div>
 
 	</div>

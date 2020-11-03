@@ -36,20 +36,30 @@
 .nav-color {
 	color: #0B2161;
 }
+
+.selectVideo {
+	border: solid 3px #A9D0F5;
+}
+
+.movieImg:hover {
+	filter: opacity(.1);
+}
 </style>
 <script>
 	$(function() {
-		$('.movie').each(function(index1, item) {
-			$(this).click(function() {
-				$('.carousel-item').each(function(index2, item) {
-					$(this).removeClass('active');
-					if (index1 == index2) {
-						$(this).addClass('active');
-					}
-				});
+		$('.movie').each(
+				function(index1, item1) {
+					$(this).click(
+							function() {
+								$(this).addClass('selectVideo');
+								$(this).siblings().removeClass('selectVideo');
+								$('.carousel-item:eq(' + index1 + ')')
+										.addClass('active');
+								$('.carousel-item:eq(' + index1 + ')')
+										.siblings().removeClass('active');
+							});
 
-			});
-		})
+				});
 	});
 </script>
 </head>
@@ -251,16 +261,19 @@
 				</div>
 				<hr>
 				<button class="movie">
-					<img alt="" src="https://img.youtube.com/vi/Vg8VH4BH6uo/0.jpg"
-						width="150px" height="100px">
+					<img class="movieImg" alt=""
+						src="https://img.youtube.com/vi/Vg8VH4BH6uo/0.jpg" width="150px"
+						height="100px">
 				</button>
 				<button class="movie">
-					<img alt="" src="https://img.youtube.com/vi/9abWPuQNL-I/0.jpg"
-						width="150px" height="100px">
+					<img class="movieImg" alt=""
+						src="https://img.youtube.com/vi/9abWPuQNL-I/0.jpg" width="150px"
+						height="100px">
 				</button>
 				<button class="movie">
-					<img alt="" src="https://img.youtube.com/vi/iCnU-q5TULk/0.jpg"
-						width="150px" height="100px">
+					<img class="movieImg" alt=""
+						src="https://img.youtube.com/vi/iCnU-q5TULk/0.jpg" width="150px"
+						height="100px">
 				</button>
 				<hr>
 				<h2>스틸컷</h2>

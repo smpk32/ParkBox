@@ -59,8 +59,8 @@
 				id="testDatepicker" name="name" class="form-control">
 		</div>
 		<div class="form-check registerin">
-			<button type="button" class="btn btn-info" style="text-align: center">확인</button>
-			<button type="button" class="btn btn-link" style="text-align: center">취소</button>
+			<button type="button" class="btn btn-primary" style="text-align: center">확인</button>
+			<button type="button" class="btn btn-outline-dark" style="text-align: center">취소</button>
 		</div>
 	</div>
 </body>

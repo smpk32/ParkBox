@@ -19,20 +19,32 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
+<!-- 데이트피커 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" />
+<!-- 데이트피커 한국어설정 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ko.min.js" integrity="sha512-L4qpL1ZotXZLLe8Oo0ZyHrj/SweV7CieswUODAAPN/tnqN3PA1P+4qPu5vIryNor6HQ5o22NujIcAZIfyVXwbQ==" crossorigin="anonymous"></script>
+
 <style type="text/css">
 @font-face {
-      font-family: 'NanumSquare';
-      src: url('./NanumSquare_acR.ttf') format('truetype'), 
+    font-family: 'NanumSquare';
+    src: url('./NanumSquare_acR.ttf') format('truetype'), 
+}
+@font-face {
+    font-family: 'NanumBarunGothic';
+    src: url('./NanumBarunGothic.ttf') format('truetype'), 
+}
+body {
+	font-family: 'NanumBarunGothic';
 }
 .container {
 	width: 1200px;
 	padding: 30px 0;
 	margin: 0 auto;
-	font-family: 'NanumSquare';
 }
-
 a, a:link, a:visited, a:hover {
 	text-decoration: none;
+	color: black;
 }
 #header {
 	background-color: #0B2161;
@@ -62,7 +74,7 @@ a, a:link, a:visited, a:hover {
 #menuRight {
 	text-align: right;
 }
-.list-group { 
+.headerMenu { 
 	display: none;
 	text-align: center;
 	position: absolute;
@@ -70,6 +82,9 @@ a, a:link, a:visited, a:hover {
 	font-size: 15px;
 	width: 200px;
 	padding-top: 10px;
+}
+.headerMenu a {
+	color:white;
 }
 .nav-item:hover .list-group {
 	display: block;
@@ -105,7 +120,7 @@ a, a:link, a:visited, a:hover {
 	color: black;
 }
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
 <script type="text/javascript">
 $(function () {
 	//allMenu버튼 클릭하면 siteMap div나오게 하기
@@ -159,7 +174,7 @@ $(function () {
 			<ul class="nav nav-pills nav-justified">
 				<li class="nav-item">
 					<a id="movie">영화</a>
-					<div class="list-group list-group-flush">
+					<div class="list-group list-group-flush headerMenu">
 						<a href="#" class="list-group-item list-group-item-action">박스오피스</a>
  						<a href="#" class="list-group-item list-group-item-action">상영중인영화</a>
 						<a href="#" class="list-group-item list-group-item-action">개봉예정영화</a>
@@ -167,21 +182,21 @@ $(function () {
 				</li>
 				<li class="nav-item">
 					<a id="ticketing">예매</a>
-					<div class="list-group list-group-flush">
+					<div class="list-group list-group-flush headerMenu">
 						<a href="#" class="list-group-item list-group-item-action">빠른예매</a>
  						<a href="#" class="list-group-item list-group-item-action">상영시간표</a>
 					</div>
 				</li>
 				<li class="nav-item">
 					<a id="theater">극장</a>
-					<div class="list-group list-group-flush">
+					<div class="list-group list-group-flush headerMenu">
 						<a href="#" class="list-group-item list-group-item-action">전체극장</a>
  						<a href="#" class="list-group-item list-group-item-action">특별관</a>
 					</div>
 				</li>
 				<li class="nav-item">
 					<a id="event">이벤트</a>
-					<div class="list-group list-group-flush">
+					<div class="list-group list-group-flush headerMenu">
 						<a href="#" class="list-group-item list-group-item-action">진행중 이벤트</a>
  						<a href="#" class="list-group-item list-group-item-action">지난 이벤트</a>
  						<a href="#" class="list-group-item list-group-item-action">당첨자 발표</a>

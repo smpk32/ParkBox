@@ -20,7 +20,6 @@
 <style>
 .register {
 	background-color: #E0ECF8;
-	width: 800px;
 	justify-content: center;
 	padding : 100px;
 	margin : 100px;
@@ -34,7 +33,8 @@
 }
 </style>
 <body>
-	<div class="container register">
+<div class = "container">
+	<div class=" register">
 		<h2 class="form-input registerin">회원가입</h2>
 		<div class="form-input registerin">
 			<label class="field" for="name">이메일</label> <input type="text"
@@ -63,6 +63,7 @@
 			<button type="button" class="btn btn-outline-dark" style="text-align: center">취소</button>
 		</div>
 	</div>
+</div>
 </body>
 <script>
 	$(function() {

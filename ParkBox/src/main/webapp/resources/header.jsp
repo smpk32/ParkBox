@@ -46,6 +46,11 @@ a, a:link, a:visited, a:hover {
 	text-decoration: none;
 	color: black;
 }
+.row {
+	align-items: center;
+	width: 100%;
+    margin: 0 auto;
+}
 #header {
 	background-color: #0B2161;
 	padding: 0 20px;
@@ -74,17 +79,23 @@ a, a:link, a:visited, a:hover {
 #menuRight {
 	text-align: right;
 }
-.headerMenu { 
-	display: none;
+.navMenu {
 	text-align: center;
+	margin:  0;
+	padding:0;
+}
+.headerMenu { 
+	display:none;
+	width: 100%;
 	position: absolute;
 	z-index: 1;
 	font-size: 15px;
-	width: 200px;
 	padding-top: 10px;
 }
 .headerMenu a {
 	color:white;
+	height: 45px;
+	border: none;
 }
 .nav-item:hover .list-group {
 	display: block;
@@ -119,6 +130,25 @@ a, a:link, a:visited, a:hover {
 #siteMap a {
 	color: black;
 }
+
+/* 스크롤 바 넓이 16px */
+::-webkit-scrollbar{width: 15px;}
+/* 스크롤 바 트랙 색상 */
+::-webkit-scrollbar-track {
+    background-color: #E6E6E6;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+  }
+/* 스크롤 구간 색상 */
+::-webkit-scrollbar-thumb {
+	background-color:#0B2161;
+	border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+} 
+/* 스크롤 바 위에 마우스 올렸을 때(hover) 색상 */
+::-webkit-scrollbar-thumb:hover {background-color: #0174DF;} 
+
 </style>
 
 <script type="text/javascript">
@@ -171,8 +201,8 @@ $(function () {
 		
 		<!-- 상단 주메뉴 -->
 		<div class="col-8">
-			<ul class="nav nav-pills nav-justified">
-				<li class="nav-item">
+			<ul class="nav nav-pills row">
+				<li class="nav-item navMenu col">
 					<a id="movie">영화</a>
 					<div class="list-group list-group-flush headerMenu">
 						<a href="#" class="list-group-item list-group-item-action">박스오피스</a>
@@ -180,21 +210,21 @@ $(function () {
 						<a href="#" class="list-group-item list-group-item-action">개봉예정영화</a>
 					</div>
 				</li>
-				<li class="nav-item">
-					<a id="ticketing">예매</a>
+				<li class="nav-item navMenu col">
+					<a id="ticketing" >예매</a>
 					<div class="list-group list-group-flush headerMenu">
 						<a href="#" class="list-group-item list-group-item-action">빠른예매</a>
  						<a href="#" class="list-group-item list-group-item-action">상영시간표</a>
 					</div>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item navMenu col">
 					<a id="theater">극장</a>
 					<div class="list-group list-group-flush headerMenu">
 						<a href="#" class="list-group-item list-group-item-action">전체극장</a>
  						<a href="#" class="list-group-item list-group-item-action">특별관</a>
 					</div>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item navMenu col">
 					<a id="event">이벤트</a>
 					<div class="list-group list-group-flush headerMenu">
 						<a href="#" class="list-group-item list-group-item-action">진행중 이벤트</a>

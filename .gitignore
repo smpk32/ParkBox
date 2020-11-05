@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 /.metadata/
 /Servers
 ParkBox/.classpath
 ParkBox/.project
 ParkBox/.springBeans
 ParkBox/.settings
+=======
+.metadata/
+Servers/
+/.classpath/
+>>>>>>> Stashed changes

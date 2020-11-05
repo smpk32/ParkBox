@@ -22,10 +22,12 @@ public class HomeController {
 	private SqlSessionFactory factory;
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
+	public ModelAndView home(Locale locale, Model model) {
 		List<vo> vo =  factory.openSession().selectList("crud.mapper.listUser");
-		//return new ModelAndView("home","memlist",vo);
-		return "home";
+		System.out.println(vo);
+		
+		return new ModelAndView("home","memlist",vo);
+		
 	}
 	
 }

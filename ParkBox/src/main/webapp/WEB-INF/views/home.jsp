@@ -8,7 +8,7 @@
 </head>
 <body>
 <%
-List<vo> list = (List<vo>)request.getAttribute("memList");
+List<vo> list = (List<vo>)request.getAttribute("memlist");
 %>
 <c:if test="${!empty list}">
 <table border="1">

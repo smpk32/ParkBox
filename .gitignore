@@ -1,6 +1,4 @@
-/.metadata/
-/Servers
-ParkBox/.classpath
-ParkBox/.project
-ParkBox/.springBeans
-ParkBox/.settings
+.metadata/
+Servers/
+/.classpath/
+/ParkBox

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ include file="header.jsp"%>
+<%@ include file="/resources/header.jsp"%>
 <head>
 <style type="text/css">
 .subTitle{
@@ -56,7 +56,7 @@ line-height: 50px;
 </head>
 <body>
 	<div class="container">
-	<center class="subTitle">박스오피스</center>
+	<div align="center" class="subTitle">박스오피스</div>
 	<!-- 상단 박스오피스 리스트 -->
 	<div class="row">
 		<div class="col-3 text-center">
@@ -131,4 +131,4 @@ line-height: 50px;
 	
 </div>
 </body>
-<%@ include file="footer.jsp"%>
+<%@ include file="/resources/footer.jsp"%>

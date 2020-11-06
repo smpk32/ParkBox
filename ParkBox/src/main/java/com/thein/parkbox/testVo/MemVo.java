@@ -2,18 +2,28 @@ package com.thein.parkbox.testVo;
 
 import java.util.Date;
 
-public class vo {
-	public vo() {
+public class MemVo {
+	public MemVo() {
 		super();
 	}
+	private String email;
+	
 	private String name;
 	private String pw;
 	private String phone;
 	private Date birth;
 	private int point;
-	private Date sigdate;
+	private Date signdate;
 	private Date lastLog;
 	private char status;
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -44,11 +54,11 @@ public class vo {
 	public void setPoint(int point) {
 		this.point = point;
 	}
-	public Date getSigdate() {
-		return sigdate;
+	public Date getSigndate() {
+		return signdate;
 	}
-	public void setSigdate(Date sigdate) {
-		this.sigdate = sigdate;
+	public void setSigndate(Date sigdate) {
+		this.signdate = sigdate;
 	}
 	public Date getLastLog() {
 		return lastLog;

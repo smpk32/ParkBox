@@ -13,7 +13,7 @@
 <div id="footer" style="background-color:#F2F2F2;">
 <div class="container row">
 	<div class="col-3 ml-auto">
-		<a href="#"><img src="./logob.png" alt="메인으로 가기" width="250px"></a>
+		<a href="#"><img src="/parkbox/resources/logob.png" alt="메인으로 가기" width="250px"></a>
 	</div>
 	<div class="col-5">
 		<address>서울특별시 강남구 테헤란로8길 13, 3층 더인에듀</address>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="crud.mapper">
+	<select id="listUser3" resultType="ob">
+	<![CDATA[
+	select * from MEMBER;
+	]]>
+	</select>
+	
+	<insert parameterType="com.thein.parkbox.testVo.MemVo" id="addUser">
+	<![CDATA[
+	INSERT INTO MEMBER(EMAIL,PW,NAME,PHONE,BIRTH,POINT,SIGNDATE,LASTLOG,STATUS)
+	VALUES(
+	#{email},
+	#{pw},
+	#{name},
+	#{phone},
+	#{birth},
+	#{point},
+	#{signdate},
+	#{lastLog},
+	#{status}
+	)
+	]]>
+	</insert>
+</mapper>

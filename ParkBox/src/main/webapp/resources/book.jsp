@@ -214,7 +214,6 @@
 	padding: 0;
 	white-space: nowrap; /*줄바꿈금지*/
 }
-
 .hourBtn {
 	border: none;
 	width: 30px;
@@ -940,7 +939,7 @@
 
 		</div><!-- 예매창 끝 -->
 
-
+		<!-- 하단 선택정보 보여주기영역 -->
 		<div id="InfoArea">
 			<div class="bookingInfo">
 				<span>영화선택</span>
@@ -960,10 +959,11 @@
 			<div class="bookingInfo">
 				<!-- 예매정보form -->
 				<form id="bookingInfoForm" action="#">
-					<input type="hidden" name="moviename" /> <input type="hidden"
-						name="thename" /> <input type="hidden" name="screendate" /> <input
-						type="hidden" name="starttime" /> <input type="hidden"
-						name="screenname" />
+					<input type="hidden" name="moviename" /> 
+					<input type="hidden" name="thename" /> 
+					<input type="hidden" name="screendate" /> 
+					<input type="hidden" name="starttime" /> 
+					<input type="hidden" name="screenname" />
 					<button id="bookBtn" type="button" class="btn btn-light"
 						style="width: 150px" onclick="test()">
 						<i class="far fa-hand-point-right fa-4x"></i>
@@ -971,8 +971,8 @@
 					</button>
 				</form>
 			</div>
-
-		</div>
+		</div><!-- 하단 정보창 끝 -->
+		
 	</div>
 </body>
 </html>

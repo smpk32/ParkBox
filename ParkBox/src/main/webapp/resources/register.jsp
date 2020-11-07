@@ -1,67 +1,90 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="header.jsp"%>
-<!-- 합쳐지고 최소화된 최신 CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
-<!-- 부가적인 테마 -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
-<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
-<!-- datepicker  사용을 위한 설정 -->
-<link rel="stylesheet"
-	href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css"
-	type="text/css" />
-<script
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
 <style>
-.register {
-	background-color: #E0ECF8;
+#register {
+	border: 1px solid #0B2161;
 	justify-content: center;
-	padding : 100px;
-	margin : 100px;
+	width: 700px;
+	padding: 30px;
+	margin : 15px auto;
 	align-items: center;
 }
 
-.registerin {
-	width: 350px;
-	padding : 15px;
-	margin: 0px auto;
+#registerForm {
+	width: 400px;
+	margin: 40px auto;
+}
+
+#registerForm label {
+	display: block;
+}
+
+#registerForm input {
+	display: inline-block;
+	width: 300px;
+}
+.registerBtn {
+	text-align: center;
+	margin-top: 40px;
+}
+.registerBtn button {
+	width: 250px;
+	height: 50px;
+	margin: 0 auto;
+	background-color: #0B2161;
+	color: white;
+	border: none;
 }
 </style>
 <body>
 <div class = "container">
-	<div class=" register">
-		<h2 class="form-input registerin">회원가입</h2>
-		<div class="form-input registerin">
-			<label class="field" for="name">이메일</label> <input type="text"
-				id="email" name="email" class="form-control"> <input
-				type="submit" value="중복확인" onclick="javascript:search()" />
-		</div>
-		<div class="form-input registerin">
-			<label class="field" for="password">비밀번호</label> 
-			<input type="text" id="password" name="password" class="form-control">
-		</div>
-		<div class="form-input registerin">
-			<label class="field" for="passwordCheck">비밀번호확인</label> <input
-				type="text" id="passwordCheck" name="passwordCheck"
-				class="form-control">
-		</div>
-		<div class="form-input registerin">
-			<label class="field" for="name">이름</label> <input type="text"
-				id="name" name="name" class="form-control">
-		</div>
-		<div class="form-input registerin">
-			<label class="field" for="name">생년월일</label> <input type="text"
-				id="testDatepicker" name="name" class="form-control">
-		</div>
-		<div class="form-check registerin">
-			<button type="button" class="btn btn-primary" style="text-align: center">확인</button>
-			<button type="button" class="btn btn-outline-dark" style="text-align: center">취소</button>
-		</div>
+	<div id="register">
+		<h2 style="text-align: center;">회원가입</h2>
+		
+		<form id="registerForm" action="/register" method="post" class="needs-validation" novalidate>
+		    <div class="form-group">
+		      <label for="email">이메일</label>
+		      <input type="email" class="form-control" id="email" placeholder="이메일을 입력해주세요" name="email" required>
+		      <button type="button" onclick="checkEmail()" class="btn btn-info">중복확인</button>
+		      <div class="invalid-feedback">Please fill out this field.</div>
+		    </div>
+		    
+		    <div class="form-group">
+		      <label for="pw">비밀번호</label>
+		      <input type="password" class="form-control" id="pw" placeholder="비밀번호를 입력해주세요" name="pw" required>
+		      <div class="invalid-feedback">Please fill out this field.</div>
+		    </div>
+		    
+		     <div class="form-group">
+		      <label for="pwdChk">비밀번호 확인</label>
+		      <input type="password" class="form-control" id="pwdChk" placeholder="비밀번호를 재입력해주세요" name="pwdChk" required>
+		      <div class="invalid-feedback">Please fill out this field.</div>
+		    </div>
+		    
+		    <div class="form-group">
+		      <label for="name">이름</label>
+		      <input type="text" class="form-control" id="name" placeholder="이름을 입력해주세요" name="name" required>
+		      <div class="invalid-feedback">Please fill out this field.</div>
+		    </div>
+		    
+		    <div class="form-group">
+		      <label for="phone">휴대폰번호</label>
+		      <input type="tel" class="form-control" id="phone" placeholder="휴대폰번호를 입력해주세요" name="phone" required>
+		      <div class="invalid-feedback">Please fill out this field.</div>
+		    </div>
+		    
+		    <div class="form-group">
+		      <label for="birth">생년월일</label>
+		      <input type="date" class="form-control" id="birth" name="birth" required>
+		      <div class="invalid-feedback">Please fill out this field.</div>
+		    </div>
+    		
+    		<div class="registerBtn">
+		    	<button type="submit" class="btn" onclick="#">회원가입</button>
+	    	</div>
+ 	 	</form>
+	
 	</div>
 </div>
 </body>
@@ -83,5 +106,24 @@
 					minDate : "-50Y"
 				});
 	});
+
+	// Disable form submissions if there are invalid fields
+	(function() {
+	  'use strict';
+	  window.addEventListener('load', function() {
+	    // Get the forms we want to add validation styles to
+	    var forms = document.getElementsByClassName('needs-validation');
+	    // Loop over them and prevent submission
+	    var validation = Array.prototype.filter.call(forms, function(form) {
+	      form.addEventListener('submit', function(event) {
+	        if (form.checkValidity() === false) {
+	          event.preventDefault();
+	          event.stopPropagation();
+	        }
+	        form.classList.add('was-validated');
+	      }, false);
+	    });
+	  }, false);
+	})();	
 </script>
 <%@include file = "footer.jsp"%>

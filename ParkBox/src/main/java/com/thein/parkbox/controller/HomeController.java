@@ -1,30 +1,27 @@
-package com.thein.parkbox;
-
-
-
-import java.util.List;
-import java.util.Locale;
-
-import org.apache.ibatis.session.SqlSessionFactory;
+package com.thein.parkbox.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
-import com.thein.parkbox.testVo.vo;
+import com.thein.parkbox.service.MemCrudService;
 
 @Controller
 public class HomeController {
-	@Autowired
-	private SqlSessionFactory factory;
+	private MemCrudService memService;
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public ModelAndView home(Locale locale, Model model) {
-		List<vo> vo =  factory.openSession().selectList("crud.mapper.listUser");
-		return new ModelAndView("home","memlist",vo);
+	@Autowired
+	public HomeController(MemCrudService memService) {
+		super();
+		this.memService = memService;
+	}
+
+	//회원전체리스트 
+	@RequestMapping("/test")
+	public String memAllList(Model model) {
+		model.addAttribute("memlist", memService.memAllList());
+		return "home";
 	}
 	
 }

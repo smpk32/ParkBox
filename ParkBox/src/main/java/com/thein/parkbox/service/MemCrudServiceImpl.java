@@ -1,5 +1,7 @@
 package com.thein.parkbox.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +12,7 @@ import com.thein.parkbox.testVo.MemVo;
 public class MemCrudServiceImpl implements MemCrudService {
 
 	@Autowired
-	MemCrudDAO memDao;
+	private MemCrudDAO memDao;
 	
 	@Override
 	public int memAdd(MemVo mVo) {
@@ -18,11 +20,15 @@ public class MemCrudServiceImpl implements MemCrudService {
 		
 	}
 
-
 	@Override
 	public int memUpdate(MemVo mVo) {
-		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	//회원전체보기
+	@Override
+	public List<MemVo> memAllList() {
+		return memDao.memAllList();
 	}
 
 }

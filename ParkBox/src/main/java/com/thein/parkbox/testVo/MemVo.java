@@ -7,7 +7,6 @@ public class MemVo {
 		super();
 	}
 	private String email;
-	
 	private String name;
 	private String pw;
 	private String phone;

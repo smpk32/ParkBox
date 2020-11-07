@@ -5,11 +5,14 @@
 
 
 	<typeAliases>
-		<typeAlias alias="ob" type="com.thein.parkbox.testVo.vo" />
+		<typeAlias type="com.thein.parkbox.testVo.MemVo" alias="MemVo" />
 	</typeAliases>
 	<!-- 쿼리문 -->
 
 	<mappers>
-		<mapper resource="com/thein/parkbox/mybatis/mybatis-mapper.xml" />
+		<mapper resource="/mapper-test.xml" />
+		<mapper resource="/mapper-sh.xml" />
+		<mapper resource="/mapper-sj.xml" />
+		<mapper resource="/mapper-sm.xml" />
 	</mappers>
 </configuration>

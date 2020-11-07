@@ -21,6 +21,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	<!-- 베이스 패키지 경로 -->
 	<context:component-scan base-package="com.thein.parkbox" />
 	
 	

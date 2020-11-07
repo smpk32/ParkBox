@@ -9,8 +9,8 @@
 	<title>Home</title>
 </head>
 <body>
-   <c:if test="${!empty memlist}">
-      <table border="1">
+     <table border="1">
+   		<c:if test="${!empty memlist}">
          <tr>
             <td>이름</td>
             <td>비밀번호</td>
@@ -23,7 +23,10 @@
             <td>${ob.email}</td>
          </tr>
          </c:forEach>
-      </table>
    </c:if>
+   <c:if test="${empty memlist}">
+   		<tr><td colspan="5">작성된 글이 없습니다.</td></tr>
+	</c:if>
+	</table>
 </body>
 </html>

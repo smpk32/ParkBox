@@ -42,7 +42,7 @@
 	<div id="register">
 		<h2 style="text-align: center;">회원가입</h2>
 		
-		<form id="registerForm" action="/register" method="post" class="needs-validation" novalidate>
+		<form id="registerForm" action="/parkbox/register" method="post" class="needs-validation" novalidate>
 		    <div class="form-group">
 		      <label for="email">이메일</label>
 		      <input type="email" class="form-control" id="email" placeholder="이메일을 입력해주세요" name="email" required>

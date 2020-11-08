@@ -2,6 +2,8 @@ package com.thein.parkbox.testVo;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class MemVo {
 	public MemVo() {
 		super();
@@ -10,6 +12,7 @@ public class MemVo {
 	private String name;
 	private String pw;
 	private String phone;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date birth;
 	private int point;
 	private Date signdate;

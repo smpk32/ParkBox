@@ -16,11 +16,11 @@
             <td>비밀번호</td>
             <td>이메일</td>
          </tr>
-         <c:forEach items="${memlist}" var="ob">
+         <c:forEach items="${memlist}" var="mem">
          <tr>
-            <td>${ob.name}</td>      <!-- getter가 있어야 함 -->
-            <td>${ob.pw}</td>
-            <td>${ob.email}</td>
+            <td>${mem.name}</td>      <!-- getter가 있어야 함 -->
+            <td>${mem.pw}</td>
+            <td>${mem.email}</td>
          </tr>
          </c:forEach>
    </c:if>

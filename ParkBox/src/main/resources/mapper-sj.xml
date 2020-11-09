@@ -3,10 +3,19 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="mapper.sj">
-	<select id="listUser" resultType="MemVo">
+	
+	
+	<select id="login" resultType="MemVo" parameterType = "MemVo">
 	<![CDATA[
-	select * from MEMBER;
+		SELECT * FROM MEMBER WHERE EMAIL = #{email} AND PW = #{pw};
 	]]>
+	
 	</select>
+	
+	
+	
+	
+	
+	
 	
 </mapper>

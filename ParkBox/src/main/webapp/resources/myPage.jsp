@@ -5,19 +5,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>마이페이지</title>
 <style type="text/css">
-.myPageNav th, .myPageNav td  {
-	width: 150px;
-	height: 80px;
-	text-align: center;
-	border: 1px solid #D8D8D8;
-	color: #0B2161;
-}
-.myPageNav a {
-	color: #0B2161;
-}
-.myPageNav a:hover {
-	color: #A9D0F5;
-}
 #memInfo {
 	background-color: #0A0A2A;
 	color: white;
@@ -53,20 +40,33 @@ function seeMore(val) {
 	// target이 review면 무비스토리 - 한줄 평 목록으로 이동
 	// target이 like면 무비스토리 - 내가 찜한 영화 목록으로 이동
 }
+
+
+//예매취소
+function cancleTicket() {
+
+	var movieTime = new Date('11/01/2020 21:30:00'); // 영화상영시간 (지금은 가상)
+	var now = new Date();	//현재시간
+	
+	var leftTime = (movieTime - now) / 60000; //1분이 60000ms초 영화 시간 - 현재시간해서 몇분 남았는지 계산하기
+	alert("남은시간: " + leftTime +"분");
+
+	//현재 시간 기준으로 영화 시간이 15분 이상 남았을 때만 취소 가능
+	if (leftTime>15) {
+		alert('취소컨트롤러로이동');	
+	} else if(leftTime>0 && leftTime < 15) {
+		alert('상영시간이 15분 미만으로 남아 취소가 불가합니다.');
+	} else {
+		alert('상영시간이 지나 취소가 불가합니다.');
+	}
+}
 </script>
 </head>
 <body>
 <div class="container row">
 	<!-- 마이페이지 네비게이션바 -->
-	<div class="myPageNav col-2">
-		<table style="border: 1px solid #D8D8D8;">
-			<tr><th style="background-color:#F2F2F2 ">나의 파크박스</th></tr>
-			<tr><td><a href="#">예매내역</a></td></tr>
-			<tr><td><a href="#">멤버십포인트</a></td></tr>
-			<tr><td><a href="#">무비스토리</a></td></tr>
-			<tr><td><a href="#">나의문의내역</a></td></tr>
-			<tr><td><a href="#">회원정보수정</a></td></tr>
-		</table>
+	<div class="col-2">
+		<%@ include file="managerHeader.jsp"%>
 	</div>
 	
 	<!-- 마이페이지 컨텐츠영역 -->
@@ -126,7 +126,7 @@ function seeMore(val) {
 					<p>예매내역이 들어가있음~~</p>
 					<p>예매내역예매내역</p>
 				</div>
-				<div class="col-2"><button class="btn btn-info">예매취소</button></div>
+				<div class="col-2"><button class="btn btn-info" data-toggle="modal" data-target="#cancelModal">예매취소</button></div>
 			</div>
 		</div>
 		<br/><br/>
@@ -151,6 +151,33 @@ function seeMore(val) {
 		</div>
 	</div>
 </div>
+
+
+<!-- The Modal -->
+  <div class="modal" id="cancelModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <b class="modal-title">알림</b>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          예매를 취소하시겠습니까?
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+        	<button type="button" class="btn btn-danger" data-dismiss="modal" onclick="cancleTicket()">확인</button>
+         	<button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
 </body>
 </html>
 <%@ include file="footer.jsp"%>

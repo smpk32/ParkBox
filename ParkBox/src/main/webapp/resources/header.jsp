@@ -47,7 +47,6 @@ a, a:link, a:visited, a:hover {
 	color: black;
 }
 .row {
-	align-items: center;
 	width: 100%;
     margin: 0 auto;
 }

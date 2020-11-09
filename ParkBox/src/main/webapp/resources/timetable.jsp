@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="header.jsp"%>
 <head>
+<title>시간표</title>
 <style type="text/css">
 td{
 	width : 200px;
@@ -56,43 +57,49 @@ $(function() {
 
 </head>
 <body>
-<div class="container">
-  <h2>영화시간표</h2>
-  <form action="">
-  <div class="row">
-  	<div class="col-2">극장선택</div>
-  	<div class="col-2">
-  		<select name="theater" class="custom-select mb-3 mv-select">
-      <option selected value="gangnam">강남</option>
-      <option value="Wangsimni">왕십리</option>
-      <option value="Yeongdeungpo">영등포</option>
-      <option value="Mokdong">목동</option>
-    </select>
-  	</div>
-  	<div class="col-2">날짜</div>
-  	<div class="col-2">
-  		
-  <input class="date" type="date" name="date">
-</form>
-  	</div>
-  	<div>
+<div class="container row">
+	<div class="col-2">
+		<%@ include file="managerHeader.jsp"%>
+	</div>
+	
+	<div class="col">
+		<h2>영화시간표</h2>
+  		<form action="">
+	 		 <div class="row">
+	  			<div class="col-2">극장선택</div>
+	  			<div class="col-2">
+		  			<select name="theater" class="custom-select mb-3 mv-select">
+			      		<option selected value="gangnam">강남</option>
+			     		<option value="Wangsimni">왕십리</option>
+			     		<option value="Yeongdeungpo">영등포</option>
+			     		<option value="Mokdong">목동</option>
+		    		</select>
+	  			</div>
+	  			<div class="col-2">날짜</div>
+	  			<div class="col-2">
+	  				<input class="date" type="date" name="date">
+	  			</div>
+	  		</div>
+		</form>
   	
-  	</div>
-<div>
-  <table class="table table-bordered" id="timetable">
-    <thead>
-      <tr>
-      	<th></th>
-        <th>1회차</th>
-        <th>2회차</th>
-        <th>3회차</th>
-        <th>4회차</th>
-        <th>5회차</th>
-        <th>6회차</th>
-      </tr>
-    </thead>
-  </table>
+		<div>
+ 		 	<table class="table table-bordered" id="timetable">
+    			<thead>
+			      <tr>
+			      	<th></th>
+			        <th>1회차</th>
+			        <th>2회차</th>
+			        <th>3회차</th>
+			        <th>4회차</th>
+			        <th>5회차</th>
+			        <th>6회차</th>
+			      </tr>
+			    </thead>
+  			</table>
+  		</div>
   </div>
+</div>
+
   <!-- modal -->
   <div class="modal" id="timetableAddModal">
     <div class="modal-dialog">
@@ -130,8 +137,7 @@ $(function() {
         </div>
       </div>
     </div>
-  </div>
-      
-
+</div>
 </body>
+ 
 <%@ include file="footer.jsp"%>

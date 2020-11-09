@@ -19,4 +19,15 @@ public class SM_ServiceImpl implements SM_Service {
 		return smDao.MemAdd(mvo);
 	}
 
+	@Override
+	public String memCheck(String email) {
+		
+		return smDao.MemCheck(email);
+	}
+
+	@Override
+	public int MemDel(String email) {
+		return smDao.MemDel(email);
+	}
+
 }

@@ -59,8 +59,8 @@ public class MemVo {
 	public Date getSigndate() {
 		return signdate;
 	}
-	public void setSigndate(Date sigdate) {
-		this.signdate = sigdate;
+	public void setSigndate(Date signdate) {
+		this.signdate = signdate;
 	}
 	public Date getLastLog() {
 		return lastLog;

@@ -43,7 +43,7 @@
 		<div class="col-10">
 		<div class="container tableupdate">
 			<h3>개인정보 수정</h3>
-			<button type="button" class="btn btn-secondary memdelete" onclick = "#">탈퇴하기</button>
+			<button type="button" class="btn btn-secondary memdelete" data-toggle="modal" data-target="#memDel">탈퇴하기</button>
 			<table class="table table-striped">
 				<tr>
 					<td>이름</td>
@@ -150,6 +150,31 @@
 		</div>
 		</div>
 	</div>
+	
+	<div class="modal fade" id="memDel">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content">
+									<!-- Modal Header -->
+									<div class="modal-header">
+										<h4 class="modal-title">회원탈퇴</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									</div>
+
+									<!-- Modal body -->
+									<div class="modal-body">
+										<h5>정말 탈퇴하시겠습니까?</h5>
+										
+
+									<!-- Modal footer -->
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary submitEmail"
+											data-dismiss="modal">확인</button>
+										<button type="button" class="btn btn-secondary"
+											data-dismiss="modal">취소</button>
+									</div>
+								</div>
+							</div>
+						</div>
 	<script>
 		function openZipSearch() {
 			new daum.Postcode({
@@ -161,6 +186,20 @@
 			}).open();
 			self.close();
 		}
+		
+		$('.submitEmail').click(function() {
+			$.ajax({
+				type:"POST",
+			url:"../memDel",
+			data:"email=smpk32@naver.com",
+			async : false,
+			success: function(){
+				alert("회원탈퇴되었습니다.");
+				location.href="/parkbox/";
+			}
+			});
+		});
+
 	</script>
 </body>
 </html>

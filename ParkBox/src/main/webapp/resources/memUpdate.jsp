@@ -9,8 +9,6 @@
 <style type="text/css">
 
 .tableupdate {
-	top: 30%;
-	left: 30%;
 	margin: 5px;
 	width: 800px;
 }
@@ -28,18 +26,24 @@
 .modal-content {
 	color: #585858;
 }
+.memdelete{
+	float: right;
+	margin: 10px;
+}
 </style>
 </head>
 <body>
 	<div class="container row">
 		<!-- 마이페이지 네비게이션바 -->
 	<div class="col-2">
-		<%@ include file="managerHeader.jsp"%>
+		<%@ include file="myPageNav.jsp"%>
 	</div>
 
 		<!-- 마이페이지 - 회원정보수정 -->
+		<div class="col-10">
 		<div class="container tableupdate">
 			<h3>개인정보 수정</h3>
+			<button type="button" class="btn btn-secondary memdelete" onclick = "#">탈퇴하기</button>
 			<table class="table table-striped">
 				<tr>
 					<td>이름</td>
@@ -143,6 +147,7 @@
 				<button type="button" class="btn btn-primary">확인</button>
 				<button type="button" class="btn btn-outline-dark">취소</button>
 			</div>
+		</div>
 		</div>
 	</div>
 	<script>

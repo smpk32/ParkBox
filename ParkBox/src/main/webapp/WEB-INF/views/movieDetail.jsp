@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="header.jsp"%>
 <head>
+<title>영화 상세페이지</title>
 <style type="text/css">
 .text-center {
 	text-align: center;

@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.thein.parkbox.service.SJ_Service;
 import com.thein.parkbox.testVo.MemVo;
@@ -22,26 +24,24 @@ public class SJController {
 	}
 	
 
-	@RequestMapping("/login")
-	public String login(HttpSession session, MemVo memvo, Model model) {
+	
+	@RequestMapping(value = "/login", method={RequestMethod.GET,RequestMethod.POST})
+	@ResponseBody
+	public String login(HttpSession session, MemVo memvo) {
 		MemVo loginvo = service.login(memvo);
-		System.out.println(loginvo.getEmail());
-		System.out.println(loginvo.getPw());
+		String str = "";
 		
 		if (loginvo == null) {
-			model.addAttribute("result", "로그인에 실패했습니다.");
-			return "login";
+			str = "fail";
 		} else {
-			model.addAttribute("result", "로그인에 성공했습니다.");
 			session.setAttribute("loginvo", loginvo);
+			str = "ok";
 		}
-		return "home";
-
-		/* model.addAttribute("memlist", ); */
-
+		
+		return str;
 	}
 	
-	@RequestMapping("/loginjsp")
+	@RequestMapping("/gologin")
 	public String loginjsp(HttpSession session, MemVo memvo, Model model) {
 		return "login";
 	}

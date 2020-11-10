@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ include file="/resources/header.jsp"%>
+<%@ include file="/WEB-INF/views/header.jsp"%>
 <head>
 <style type="text/css">
 .subTitle{

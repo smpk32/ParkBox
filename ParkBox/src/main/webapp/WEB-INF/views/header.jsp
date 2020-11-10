@@ -170,9 +170,14 @@ $(function () {
 <div class="container" style="padding: 10px 0;">
 	<!-- 로그인/회원가입 링크 -->
 	<div id="topLink">
-		<a href="gologin">로그인</a>
-		<span>&nbsp;&nbsp;</span>
-		<a href="register">회원가입</a>
+		<c:if test="${empty loginvo}">
+			<a href="gologin">로그인</a>
+			<span>&nbsp;&nbsp;</span>
+			<a href="register">회원가입</a>
+		</c:if>
+		<c:if test="${!empty loginvo}">
+			<a href="logout">로그아웃</a>
+		</c:if>
 	</div>
 	
 	<!-- 메인로고 -->

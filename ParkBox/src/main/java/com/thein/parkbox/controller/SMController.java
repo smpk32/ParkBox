@@ -77,6 +77,11 @@ public class SMController{
 		return "memUpdate";
 	}
 	
+	@RequestMapping(value = "/movieDetail")
+	public String goMovieDetail() {
+		return "movieDetail";
+	}
+	
 	@RequestMapping(value = "/myTicket")
 	public String goMyTicket() {
 		return "myTicket";

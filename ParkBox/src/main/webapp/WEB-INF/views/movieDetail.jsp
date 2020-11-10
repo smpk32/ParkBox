@@ -77,7 +77,7 @@
 							<i class="far fa-heart" style="line-height: 40px;"></i>
 						</div>
 					</div>
-
+					<div class="col-8"> </div>
 				</div>
 				<div class="row mt-5">
 					<div class="col-3">

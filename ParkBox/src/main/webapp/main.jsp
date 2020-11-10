@@ -62,32 +62,30 @@ color : white;
 	<div class="container">
 	<div align="center" class="subTitle">박스오피스</div>
 	<!-- 상단 박스오피스 리스트 -->
-	<div class="row">
+	<div class="row mb-3">
 		<div class="col-3 text-center">
-			<img alt="" src="" width="100%" height="400px" style="background-color: gray">
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px" style="background-color: gray" ></a>
 			<div class="row boxmenu">
 				<div class="col-8 m-auto book circle"><a href="book">예매</a></div>
 				<div class="col-3 m-auto like-btn circle"><i class="far fa-heart" style="line-height:40px;"></i></div>
 			</div>
 		</div>
 		<div class="col-3 text-center">
-			<a href="movieDetail.jsp">
-			<img alt="" src="" width="100%" height="400px" style="background-color: gray">
-			</a>
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px" style="background-color: gray"></a>
 			<div class="row boxmenu">
 				<div class="col-8 m-auto book circle"><a href="book">예매</a></div>
 				<div class="col-3 m-auto like-btn circle"><i class="far fa-heart" style="line-height:40px;"></i></div>
 			</div>
 		</div>
 		<div class="col-3 text-center">
-			<img alt="" src="" width="100%" height="400px" style="background-color: gray">
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px" style="background-color: gray"></a>
 			<div class="row boxmenu">
 				<div class="col-8 m-auto book circle"><a href="book">예매</a></div>
 				<div class="col-3 m-auto like-btn circle"><i class="far fa-heart" style="line-height:40px;"></i></div>
 			</div>
 		</div>
 		<div class="col-3 text-center">
-			<img alt="" src="" width="100%" height="400px" style="background-color: gray">
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px" style="background-color: gray"></a>
 			<div class="row boxmenu">
 				<div class="col-8 m-auto book circle"><a href="book">예매</a></div>
 				<div class="col-3 m-auto like-btn circle"><i class="far fa-heart" style="line-height:40px;"></i></div>
@@ -95,10 +93,10 @@ color : white;
 		</div>
 	</div>
 	
-	<br><br><br>
+
 	
 	<!-- 검색창,상영시간표, 박스오피스 상세보기 이동, 예매하기  -->
-	<div class="row bg-maincolor middlebar circle">
+	<div class="row bg-maincolor middlebar circle mb-3">
 		<!-- 영화검색 -->
 		<div class="col-4 bar">
 			<input class="search-input" type="text" name="searchMovie" placeholder="영화명을 입력하세요.">
@@ -121,9 +119,9 @@ color : white;
 		</div>
 	</div>
 	
-	<br><br><br><br><br>
 	
-	<div class="row">
+	
+	<div class="row mb-5">
 		<div class="col-9">
 			<iframe width="100%" height="500px" src="https://www.youtube.com/embed/Vg8VH4BH6uo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
@@ -131,7 +129,7 @@ color : white;
 		
 		</div>
 	</div>
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	
 	
 </div>
 </body>

@@ -73,13 +73,13 @@
 	<!-- 영화 리스트 한줄 -->
 	<div class="row mb-5">
 		<div class="col-3 text-center">
-			<img alt="" src="" width="100%" height="400px"
-				style="background-color: gray">
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px"
+				style="background-color: gray"></a>
 			<div class="row">
 				<h4 class="pl-3">영화제목</h4>
 			</div>
 			<div class="row">
-				<div class="col-6 moive-data-text  ml-1">예매율 39%</div>
+				<div class="col-5 moive-data-text  ml-1">예매율 39%</div>
 				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
 			</div>
 			<div class="row boxmenu">
@@ -90,13 +90,13 @@
 			</div>
 		</div>
 		<div class="col-3 text-center">
-			<img alt="" src="" width="100%" height="400px"
-				style="background-color: gray">
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px"
+				style="background-color: gray"></a>
 			<div class="row">
 				<h4 class="pl-3">영화제목</h4>
 			</div>
 			<div class="row">
-				<div class="col-6 moive-data-text  ml-1">예매율 39%</div>
+				<div class="col-5 moive-data-text  ml-1">예매율 39%</div>
 				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
 			</div>
 			<div class="row boxmenu">
@@ -107,13 +107,13 @@
 			</div>
 		</div>
 		<div class="col-3 text-center">
-			<img alt="" src="" width="100%" height="400px"
-				style="background-color: gray">
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px"
+				style="background-color: gray"></a>
 			<div class="row">
 				<h4 class="pl-3">영화제목</h4>
 			</div>
 			<div class="row">
-				<div class="col-6 moive-data-text  ml-1">예매율 39%</div>
+				<div class="col-5 moive-data-text  ml-1">예매율 39%</div>
 				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
 			</div>
 			<div class="row boxmenu">
@@ -124,13 +124,13 @@
 			</div>
 		</div>
 		<div class="col-3 text-center">
-			<img alt="" src="" width="100%" height="400px"
-				style="background-color: gray">
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px"
+				style="background-color: gray"></a>
 			<div class="row">
 				<h4 class="pl-3">영화제목</h4>
 			</div>
 			<div class="row">
-				<div class="col-6 moive-data-text  ml-1">예매율 39%</div>
+				<div class="col-5 moive-data-text  ml-1">예매율 39%</div>
 				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
 			</div>
 			<div class="row boxmenu">
@@ -146,13 +146,13 @@
 	<!-- 영화 리스트 한줄 -->
 	<div class="row mb-5">
 		<div class="col-3 text-center">
-			<img alt="" src="" width="100%" height="400px"
-				style="background-color: gray">
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px"
+				style="background-color: gray"></a>
 			<div class="row">
 				<h4 class="pl-3">영화제목</h4>
 			</div>
 			<div class="row">
-				<div class="col-6 moive-data-text  ml-1">예매율 39%</div>
+				<div class="col-5 moive-data-text  ml-1">예매율 39%</div>
 				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
 			</div>
 			<div class="row boxmenu">
@@ -163,13 +163,13 @@
 			</div>
 		</div>
 		<div class="col-3 text-center">
-			<img alt="" src="" width="100%" height="400px"
-				style="background-color: gray">
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px"
+				style="background-color: gray"></a>
 			<div class="row">
 				<h4 class="pl-3">영화제목</h4>
 			</div>
 			<div class="row">
-				<div class="col-6 moive-data-text  ml-1">예매율 39%</div>
+				<div class="col-5 moive-data-text  ml-1">예매율 39%</div>
 				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
 			</div>
 			<div class="row boxmenu">
@@ -180,13 +180,13 @@
 			</div>
 		</div>
 		<div class="col-3 text-center">
-			<img alt="" src="" width="100%" height="400px"
-				style="background-color: gray">
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px"
+				style="background-color: gray"></a>
 			<div class="row">
 				<h4 class="pl-3">영화제목</h4>
 			</div>
 			<div class="row">
-				<div class="col-6 moive-data-text  ml-1">예매율 39%</div>
+				<div class="col-5 moive-data-text  ml-1">예매율 39%</div>
 				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
 			</div>
 			<div class="row boxmenu">
@@ -197,85 +197,13 @@
 			</div>
 		</div>
 		<div class="col-3 text-center">
-			<img alt="" src="" width="100%" height="400px"
-				style="background-color: gray">
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px"
+				style="background-color: gray"></a>
 			<div class="row">
 				<h4 class="pl-3">영화제목</h4>
 			</div>
 			<div class="row">
-				<div class="col-6 moive-data-text  ml-1">예매율 39%</div>
-				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
-			</div>
-			<div class="row boxmenu">
-				<div class="col-8 m-auto book circle">예매</div>
-				<div class="col-3 m-auto like-btn circle">
-					<i class="far fa-heart" style="line-height: 40px;"></i>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- 영화 리스트 한줄  끝-->
-	<!-- 영화 리스트 한줄 -->
-	<div class="row mb-5">
-		<div class="col-3 text-center">
-			<img alt="" src="" width="100%" height="400px"
-				style="background-color: gray">
-			<div class="row">
-				<h4 class="pl-3">영화제목</h4>
-			</div>
-			<div class="row">
-				<div class="col-6 moive-data-text  ml-1">예매율 39%</div>
-				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
-			</div>
-			<div class="row boxmenu">
-				<div class="col-8 m-auto book circle">예매</div>
-				<div class="col-3 m-auto like-btn circle">
-					<i class="far fa-heart" style="line-height: 40px;"></i>
-				</div>
-			</div>
-		</div>
-		<div class="col-3 text-center">
-			<img alt="" src="" width="100%" height="400px"
-				style="background-color: gray">
-			<div class="row">
-				<h4 class="pl-3">영화제목</h4>
-			</div>
-			<div class="row">
-				<div class="col-6 moive-data-text  ml-1">예매율 39%</div>
-				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
-			</div>
-			<div class="row boxmenu">
-				<div class="col-8 m-auto book circle">예매</div>
-				<div class="col-3 m-auto like-btn circle">
-					<i class="far fa-heart" style="line-height: 40px;"></i>
-				</div>
-			</div>
-		</div>
-		<div class="col-3 text-center">
-			<img alt="" src="" width="100%" height="400px"
-				style="background-color: gray">
-			<div class="row">
-				<h4 class="pl-3">영화제목</h4>
-			</div>
-			<div class="row">
-				<div class="col-6 moive-data-text  ml-1">예매율 39%</div>
-				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
-			</div>
-			<div class="row boxmenu">
-				<div class="col-8 m-auto book circle">예매</div>
-				<div class="col-3 m-auto like-btn circle">
-					<i class="far fa-heart" style="line-height: 40px;"></i>
-				</div>
-			</div>
-		</div>
-		<div class="col-3 text-center">
-			<img alt="" src="" width="100%" height="400px"
-				style="background-color: gray">
-			<div class="row">
-				<h4 class="pl-3">영화제목</h4>
-			</div>
-			<div class="row">
-				<div class="col-6 moive-data-text  ml-1">예매율 39%</div>
+				<div class="col-5 moive-data-text  ml-1">예매율 39%</div>
 				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
 			</div>
 			<div class="row boxmenu">
@@ -290,13 +218,13 @@
 	<!-- 영화 리스트 한줄 -->
 	<div class="row mb-5">
 		<div class="col-3 text-center">
-			<img alt="" src="" width="100%" height="400px"
-				style="background-color: gray">
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px"
+				style="background-color: gray"></a>
 			<div class="row">
 				<h4 class="pl-3">영화제목</h4>
 			</div>
 			<div class="row">
-				<div class="col-6 moive-data-text  ml-1">예매율 39%</div>
+				<div class="col-5 moive-data-text  ml-1">예매율 39%</div>
 				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
 			</div>
 			<div class="row boxmenu">
@@ -307,13 +235,13 @@
 			</div>
 		</div>
 		<div class="col-3 text-center">
-			<img alt="" src="" width="100%" height="400px"
-				style="background-color: gray">
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px"
+				style="background-color: gray"></a>
 			<div class="row">
 				<h4 class="pl-3">영화제목</h4>
 			</div>
 			<div class="row">
-				<div class="col-6 moive-data-text  ml-1">예매율 39%</div>
+				<div class="col-5 moive-data-text  ml-1">예매율 39%</div>
 				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
 			</div>
 			<div class="row boxmenu">
@@ -324,13 +252,13 @@
 			</div>
 		</div>
 		<div class="col-3 text-center">
-			<img alt="" src="" width="100%" height="400px"
-				style="background-color: gray">
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px"
+				style="background-color: gray"></a>
 			<div class="row">
 				<h4 class="pl-3">영화제목</h4>
 			</div>
 			<div class="row">
-				<div class="col-6 moive-data-text  ml-1">예매율 39%</div>
+				<div class="col-5 moive-data-text  ml-1">예매율 39%</div>
 				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
 			</div>
 			<div class="row boxmenu">
@@ -341,13 +269,85 @@
 			</div>
 		</div>
 		<div class="col-3 text-center">
-			<img alt="" src="" width="100%" height="400px"
-				style="background-color: gray">
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px"
+				style="background-color: gray"></a>
 			<div class="row">
 				<h4 class="pl-3">영화제목</h4>
 			</div>
 			<div class="row">
-				<div class="col-6 moive-data-text  ml-1">예매율 39%</div>
+				<div class="col-5 moive-data-text  ml-1">예매율 39%</div>
+				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
+			</div>
+			<div class="row boxmenu">
+				<div class="col-8 m-auto book circle">예매</div>
+				<div class="col-3 m-auto like-btn circle">
+					<i class="far fa-heart" style="line-height: 40px;"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 영화 리스트 한줄  끝-->
+	<!-- 영화 리스트 한줄 -->
+	<div class="row mb-5">
+		<div class="col-3 text-center">
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px"
+				style="background-color: gray"></a>
+			<div class="row">
+				<h4 class="pl-3">영화제목</h4>
+			</div>
+			<div class="row">
+				<div class="col-5 moive-data-text  ml-1">예매율 39%</div>
+				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
+			</div>
+			<div class="row boxmenu">
+				<div class="col-8 m-auto book circle">예매</div>
+				<div class="col-3 m-auto like-btn circle">
+					<i class="far fa-heart" style="line-height: 40px;"></i>
+				</div>
+			</div>
+		</div>
+		<div class="col-3 text-center">
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px"
+				style="background-color: gray"></a>
+			<div class="row">
+				<h4 class="pl-3">영화제목</h4>
+			</div>
+			<div class="row">
+				<div class="col-5 moive-data-text  ml-1">예매율 39%</div>
+				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
+			</div>
+			<div class="row boxmenu">
+				<div class="col-8 m-auto book circle">예매</div>
+				<div class="col-3 m-auto like-btn circle">
+					<i class="far fa-heart" style="line-height: 40px;"></i>
+				</div>
+			</div>
+		</div>
+		<div class="col-3 text-center">
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px"
+				style="background-color: gray"></a>
+			<div class="row">
+				<h4 class="pl-3">영화제목</h4>
+			</div>
+			<div class="row">
+				<div class="col-5 moive-data-text  ml-1">예매율 39%</div>
+				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
+			</div>
+			<div class="row boxmenu">
+				<div class="col-8 m-auto book circle">예매</div>
+				<div class="col-3 m-auto like-btn circle">
+					<i class="far fa-heart" style="line-height: 40px;"></i>
+				</div>
+			</div>
+		</div>
+		<div class="col-3 text-center">
+			<a href="movieDetail"><img alt="" src="" width="100%" height="400px"
+				style="background-color: gray"></a>
+			<div class="row">
+				<h4 class="pl-3">영화제목</h4>
+			</div>
+			<div class="row">
+				<div class="col-5 moive-data-text  ml-1">예매율 39%</div>
 				<div class="col moive-data-text bar">개봉일 2020.11.01</div>
 			</div>
 			<div class="row boxmenu">

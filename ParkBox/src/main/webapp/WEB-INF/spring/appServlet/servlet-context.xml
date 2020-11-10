@@ -24,6 +24,17 @@
 	<!-- 베이스 패키지 경로 -->
 	<context:component-scan base-package="com.thein.parkbox" />
 	
-	
-	
+	<!-- 인터셉터 객체 생성 -->
+    <beans:bean id="authenticationInterceptor" class="com.thein.parkbox.controller.AuthenticationInterceptor"></beans:bean>
+    
+    <!-- Interceptor 설정 -->
+    <interceptors>
+        <interceptor>
+            <mapping path="/mypage"/>
+            <mapping path="/book"/>
+            <beans:ref bean="authenticationInterceptor"/>
+        </interceptor>
+    </interceptors>
+
+
 </beans:beans>

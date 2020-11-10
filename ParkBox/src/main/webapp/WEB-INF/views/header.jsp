@@ -65,10 +65,10 @@ a, a:link, a:visited, a:hover {
     text-align: right;
     padding-top: 5px;
 }
-#topLink a {
+#topLink a, #menuRight a {
 	color: white;
 }
-#topLink a:hover {
+#topLink a:hover, #menuRight a:hover {
 	color: #A9D0F5;
 }
 #mainMenu {
@@ -77,6 +77,7 @@ a, a:link, a:visited, a:hover {
 }
 #menuRight {
 	text-align: right;
+	color: white;
 }
 .headerMenu { 
 	display: none;
@@ -168,14 +169,14 @@ $(function () {
 <div class="container" style="padding: 10px 0;">
 	<!-- 로그인/회원가입 링크 -->
 	<div id="topLink">
-		<a href="/parkbox/gologin">로그인</a>
+		<a href="gologin">로그인</a>
 		<span>&nbsp;&nbsp;</span>
-		<a href="#">회원가입</a>
+		<a href="register">회원가입</a>
 	</div>
 	
 	<!-- 메인로고 -->
 	<div id="mainLogo">
-		<a href="#"><img id="logo" src="/parkbox/resources/logow.png" alt="메인으로 가기" width="300px"></a>
+		<a href="/parkbox/"><img id="logo" src="/parkbox/resources/img/logow.png" alt="메인으로 가기" width="300px"></a>
 	</div>
 	
 	<!-- 상단왼쪽아이콘(전체메뉴/영화검색) -->
@@ -197,23 +198,23 @@ $(function () {
 				<li class="nav-item">
 					<a id="movie">영화</a>
 					<div class="list-group list-group-flush headerMenu">
-						<a href="#" class="list-group-item list-group-item-action">박스오피스</a>
- 						<a href="#" class="list-group-item list-group-item-action">상영중인영화</a>
-						<a href="#" class="list-group-item list-group-item-action">개봉예정영화</a>
+						<a href="boxoffice" class="list-group-item list-group-item-action">박스오피스</a>
+ 						<a href="boxoffice" class="list-group-item list-group-item-action">상영중인영화</a>
+						<a href="boxoffice" class="list-group-item list-group-item-action">개봉예정영화</a>
 					</div>
 				</li>
 				<li class="nav-item">
 					<a id="ticketing">예매</a>
 					<div class="list-group list-group-flush headerMenu">
-						<a href="#" class="list-group-item list-group-item-action">빠른예매</a>
+						<a href="book" class="list-group-item list-group-item-action">빠른예매</a>
  						<a href="#" class="list-group-item list-group-item-action">상영시간표</a>
 					</div>
 				</li>
 				<li class="nav-item">
 					<a id="theater">극장</a>
 					<div class="list-group list-group-flush headerMenu">
-						<a href="#" class="list-group-item list-group-item-action">전체극장</a>
- 						<a href="#" class="list-group-item list-group-item-action">특별관</a>
+						<a href="theaterList" class="list-group-item list-group-item-action">전체극장</a>
+ 						<a href="theaterList" class="list-group-item list-group-item-action">특별관</a>
 					</div>
 				</li>
 				<li class="nav-item">
@@ -229,7 +230,7 @@ $(function () {
 		
 		<!-- 마이페이지 아이콘 -->
 		<div id="menuRight" class="col-2">
-			<a id="myPage"><i class="far fa-user"></i></a>
+			<a id="myPage" href="mypage"><i class="far fa-user"></i></a>
 		</div>
 	</div> <!-- 헤더메인메뉴 끝 -->
 </div> <!-- 컨테이너 끝 -->
@@ -247,19 +248,19 @@ $(function () {
                     <th>고객센터</th>
                 </tr>
                 <tr>
-                    <td><a href="#">박스오피스</a></td>
-                    <td><a href="#">빠른예매</a></td>
-                    <td><a href="#">전체극장</a></td>
+                    <td><a href="boxoffice">박스오피스</a></td>
+                    <td><a href="book">빠른예매</a></td>
+                    <td><a href="theaterList">전체극장</a></td>
                     <td><a href="#">진행중이벤트</a></td>
-                    <td><a href="#">나의 파크박스 홈</a></td>
+                    <td><a href="mypage">나의 파크박스 홈</a></td>
                     <td><a href="#">고객센터 홈</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#">상영예정작</a></td>
+                    <td><a href="boxoffice">상영예정작</a></td>
                     <td><a href="#">상영시간표</a></td>
                     <td><a href="#">특별관</a></td>
                     <td><a href="#">지난이벤트</a></td>
-                    <td><a href="#">예매내역</a></td>
+                    <td><a href="myTicket">예매내역</a></td>
                     <td><a href="#">공지사항</a></td>
                 </tr>
                 <tr>
@@ -268,22 +269,14 @@ $(function () {
                     <td></td>
                     <td><a href="#">당첨자발표</a></td>
                     <td><a href="#">멤버십포인트</a></td>
-                    <td><a href="#">1:1문의</a></td>
+                    <td><a href="ask">1:1문의</a></td>
                 </tr>
                  <tr>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td><a href="#">무비스토리</a></td>
-                    <td></td>
-                </tr>
-                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><a href="#">나의문의내역</a></td>
+                    <td><a href="movieStory">무비스토리</a></td>
                     <td></td>
                 </tr>
                  <tr>
@@ -291,7 +284,15 @@ $(function () {
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td><a href="#">회원정보수정</a></td>
+                    <td><a href="ask">나의문의내역</a></td>
+                    <td></td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="memUpdate">회원정보수정</a></td>
                     <td></td>
                 </tr>
           </table>      

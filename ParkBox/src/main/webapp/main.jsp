@@ -53,6 +53,7 @@ line-height: 50px;
 }
 
 </style>
+<title>PARKBOX</title>
 </head>
 <body>
 	<div class="container">
@@ -131,4 +132,4 @@ line-height: 50px;
 	
 </div>
 </body>
-<%@ include file="/resources/footer.jsp"%>
+<%@ include file="/WEB-INF/views/footer.jsp"%>

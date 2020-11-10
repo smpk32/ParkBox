@@ -51,6 +51,9 @@ line-height: 50px;
 .circle {
     border-radius: 10px;
 }
+.circle a {
+color : white;
+}
 
 </style>
 <title>PARKBOX</title>
@@ -63,7 +66,7 @@ line-height: 50px;
 		<div class="col-3 text-center">
 			<img alt="" src="" width="100%" height="400px" style="background-color: gray">
 			<div class="row boxmenu">
-				<div class="col-8 m-auto book circle">예매</div>
+				<div class="col-8 m-auto book circle"><a href="book">예매</a></div>
 				<div class="col-3 m-auto like-btn circle"><i class="far fa-heart" style="line-height:40px;"></i></div>
 			</div>
 		</div>
@@ -72,21 +75,21 @@ line-height: 50px;
 			<img alt="" src="" width="100%" height="400px" style="background-color: gray">
 			</a>
 			<div class="row boxmenu">
-				<div class="col-8 m-auto book circle">예매</div>
+				<div class="col-8 m-auto book circle"><a href="book">예매</a></div>
 				<div class="col-3 m-auto like-btn circle"><i class="far fa-heart" style="line-height:40px;"></i></div>
 			</div>
 		</div>
 		<div class="col-3 text-center">
 			<img alt="" src="" width="100%" height="400px" style="background-color: gray">
 			<div class="row boxmenu">
-				<div class="col-8 m-auto book circle">예매</div>
+				<div class="col-8 m-auto book circle"><a href="book">예매</a></div>
 				<div class="col-3 m-auto like-btn circle"><i class="far fa-heart" style="line-height:40px;"></i></div>
 			</div>
 		</div>
 		<div class="col-3 text-center">
 			<img alt="" src="" width="100%" height="400px" style="background-color: gray">
 			<div class="row boxmenu">
-				<div class="col-8 m-auto book circle">예매</div>
+				<div class="col-8 m-auto book circle"><a href="book">예매</a></div>
 				<div class="col-3 m-auto like-btn circle"><i class="far fa-heart" style="line-height:40px;"></i></div>
 			</div>
 		</div>
@@ -109,12 +112,12 @@ line-height: 50px;
 		<!-- 박스오피스 -->
 		<div class="col bar">
 			<i class="fas fa-film"></i>
-			<a>박스오피스</a>
+			<a href="boxoffice">박스오피스</a>
 		</div>
 		<!-- 빠른 예매 -->
 		<div class="col bar">
 			<i class="fas fa-ticket-alt"></i>
-			<a>빠른 예매</a>
+			<a href="book">빠른 예매</a>
 		</div>
 	</div>
 	

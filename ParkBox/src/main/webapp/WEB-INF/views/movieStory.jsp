@@ -63,7 +63,7 @@
 	<div class="container row">
 		<!-- 마이페이지 네비게이션바 -->
 	<div class="col-2">
-		<%@ include file="managerHeader.jsp"%>
+		<%@ include file="myPageNav.jsp"%>
 	</div>
 	
 	<!-- 마이페이지 컨텐츠영역 -->

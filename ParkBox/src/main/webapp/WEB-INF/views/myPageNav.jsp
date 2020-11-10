@@ -29,11 +29,11 @@
 	<div class="myPageNav">
 		<table style="border: 1px solid #D8D8D8;">
 			<tr><th style="background-color:#F2F2F2 ">나의 파크박스</th></tr>
-			<tr><td><a href="/myTicket">예매내역</a></td></tr>
+			<tr><td><a href="myTicket">예매내역</a></td></tr>
 			<tr><td><a href="#">멤버십포인트</a></td></tr>
-			<tr><td><a href="/movieStory">무비스토리</a></td></tr>
-			<tr><td><a href="/ask">나의문의내역</a></td></tr>
-			<tr><td><a href="/memUpdate">회원정보수정</a></td></tr>
+			<tr><td><a href="movieStory">무비스토리</a></td></tr>
+			<tr><td><a href="ask">나의문의내역</a></td></tr>
+			<tr><td><a href="memUpdate">회원정보수정</a></td></tr>
 		</table>
 	</div>
 </body>

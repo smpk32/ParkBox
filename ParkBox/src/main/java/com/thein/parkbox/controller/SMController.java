@@ -36,6 +36,32 @@ public class SMController{
 		this.memService = memService;
 	}
 	
+	@RequestMapping(value = "/register")
+	public String goRegister() {
+		return "register";
+	}
+	
+	@RequestMapping(value = "/mypage")
+	public String goMypage() {
+		return "mypage";
+	}
+	
+	@RequestMapping(value = "/boxoffice")
+	public String goBoxoffice() {
+		return "boxoffice";
+	}
+	
+	@RequestMapping(value = "/book")
+	public String goBook() {
+		return "book";
+	}
+	
+	@RequestMapping(value = "/theaterList")
+	public String gotheaterList() {
+		return "theaterList";
+	}
+	
+	
 
 	@RequestMapping(value = "/memRegister", method = {RequestMethod.GET,RequestMethod.POST})
 	public String register(HttpServletRequest request,MemVo mvo , Model model) {
@@ -63,12 +89,39 @@ public class SMController{
 		return s;
 	}
 	
+	@RequestMapping(value="/findEmail", method={RequestMethod.GET,RequestMethod.POST})
+	public String findEmail(String phone) {
+		String email = memService.findEmail(phone);
+		return email;
+	}
 	
+	@RequestMapping(value="/findPw", method={RequestMethod.GET,RequestMethod.POST})
+	public String findPw(String email) {
+		String pw = memService.findPw(email);
+		return pw;
+	}
+	
+	@RequestMapping(value="/updatePw", method={RequestMethod.GET,RequestMethod.POST})
+	public String updatePw(MemVo mvo) {
+		int result = memService.updatePw(mvo);
+		return "home";
+	}
+	
+	@RequestMapping(value="/memUpdate", method={RequestMethod.GET,RequestMethod.POST})
+	public String memUpdate(MemVo mvo) {
+		int result = memService.memUpdate(mvo);
+		return "home";
+	}
 	
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String test(Locale locale, Model model) {
 		model.addAttribute("memlist",factory.openSession().selectList("mapper.sm.listUser"));
 		return "home";
+	}
+	@RequestMapping(value = "/home2", method = RequestMethod.GET)
+	public String test2(Locale locale, Model model) {
+		model.addAttribute("memlist",factory.openSession().selectList("mapper.sm.listUser"));
+		return "home2";
 	}
 	
 }

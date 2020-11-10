@@ -30,4 +30,26 @@ public class SM_ServiceImpl implements SM_Service {
 		return smDao.MemDel(email);
 	}
 
+	@Override
+	public String findEmail(String phone) {
+		
+		return smDao.findEmail(phone);
+	}
+
+	@Override
+	public String findPw(String email) {
+		return smDao.findPw(email);
+	}
+
+	@Override
+	public int updatePw(MemVo mvo) {
+		return smDao.updatePw(mvo);
+	}
+
+	@Override
+	public int memUpdate(MemVo mvo) {
+		
+		return smDao.memUpadte(mvo);
+	}
+
 }

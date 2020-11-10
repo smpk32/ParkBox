@@ -30,4 +30,26 @@ public class SM_DAOImpl implements SM_DAO {
 		return factory.openSession().delete("mapper.sm.memDel",email);
 	}
 
+	@Override
+	public String findEmail(String phone) {
+		return factory.openSession().selectOne("mapper.sm.findEmail",phone);
+	}
+
+	@Override
+	public String findPw(String email) {
+		
+		return factory.openSession().selectOne("mapper.sm.findPw",email);
+	}
+
+	@Override
+	public int updatePw(MemVo mvo) {
+		
+		return factory.openSession().update("mapper.sm.updatePw",mvo);
+	}
+
+	@Override
+	public int memUpadte(MemVo mvo) {
+		return factory.openSession().update("mapper.sm.memUpdate",mvo);
+	}
+
 }

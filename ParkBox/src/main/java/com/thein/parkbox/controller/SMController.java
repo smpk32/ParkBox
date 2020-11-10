@@ -36,6 +36,7 @@ public class SMController{
 		this.memService = memService;
 	}
 	
+	//페이지 이동
 	@RequestMapping(value = "/register")
 	public String goRegister() {
 		return "register";
@@ -43,7 +44,7 @@ public class SMController{
 	
 	@RequestMapping(value = "/mypage")
 	public String goMypage() {
-		return "mypage";
+		return "myPage";
 	}
 	
 	@RequestMapping(value = "/boxoffice")
@@ -61,7 +62,26 @@ public class SMController{
 		return "theaterList";
 	}
 	
+	@RequestMapping(value = "/movieStory")
+	public String goMovieStory() {
+		return "movieStory";
+	}
 	
+	@RequestMapping(value = "/ask")
+	public String goAsk() {
+		return "ask";
+	}
+	
+	@RequestMapping(value = "/memUpdate")
+	public String goMemUpdate() {
+		return "memUpdate";
+	}
+	
+	@RequestMapping(value = "/myTicket")
+	public String goMyTicket() {
+		return "myTicket";
+	}
+	//페이지 이동 끝
 
 	@RequestMapping(value = "/memRegister", method = {RequestMethod.GET,RequestMethod.POST})
 	public String register(HttpServletRequest request,MemVo mvo , Model model) {

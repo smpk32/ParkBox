@@ -19,6 +19,7 @@
 <div class ="container">
 	<div class ="login">
 		<h2 class = "form-input logininput">로그인</h2>
+		<form action="/parkbox/login" method = "post">
 		<div class = "form-input logininput">
 			<label class="field" for="email">아이디</label> 
 			<input type="text"id="email" name="email" class="form-control">
@@ -31,8 +32,9 @@
 			<input type="checkbox" id = "idsave" name="" value="1"/>아이디 저장
 		</div>
 		<div class = "form-input logininput">
-			<button type="button" class="btn btn-secondary" style="width: 100%">로그인</button>
+			<button type="submit" class="btn btn-secondary" style="width: 100%">로그인</button>
 		</div>
+		</form>
 		<div class = "form-input logininput">
 			<a href ="">ID/PW 찾기</a>
 			|

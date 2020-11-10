@@ -48,13 +48,16 @@
 	text-align: left;
 	font-size: 13px;
 }
+.switch{
+	z-index: 0;
+}
 </style>
 </head>
 <div class="container">
 	<h2>전체 영화</h2>
 	<div class="row mt-4 mb-4">
 		<form class="col-6">
-			<div class="custom-control custom-switch">
+			<div class="custom-control custom-switch switch">
 				<input type="checkbox" class="custom-control-input"
 					id="customSwitch1"> <label class="custom-control-label"
 					for="customSwitch1">상영작만</label>

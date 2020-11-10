@@ -42,7 +42,7 @@
 	<div id="register">
 		<h2 style="text-align: center;">회원가입</h2>
 		
-		<form id="registerForm" action="/parkbox/register" method="post" class="needs-validation" novalidate>
+		<form id="registerForm" action="/parkbox/memRegister" method="post" class="needs-validation" novalidate>
 		    <div class="form-group">
 		      <label for="email">이메일</label>
 		      <input type="email" class="form-control" id="email" placeholder="이메일을 입력해주세요" name="email" required>
@@ -81,7 +81,7 @@
 		    </div>
     		
     		<div class="registerBtn">
-		    	<button type="submit" class="btn" onclick="#">회원가입</button>
+		    	<button class="btn" id="submit" onclick="">회원가입</button>
 	    	</div>
  	 	</form>
 	
@@ -89,7 +89,36 @@
 </div>
 </body>
 <script>
+var check = false;
+function checkEmail(){
+	$.ajax({
+		type:"POST",
+		url:"../memCheck",
+		data : "email="+$("#email").val(),
+		async : true,
+		success : function(email){
+			if($("#email").val()==""){
+				alert("아이디를 입력해주세요.");
+			}else if(email == $("#email").val()){
+				alert("아이디가 존재합니다.");
+			}else{
+				check = true;
+				alert("사용가능한 아이디입니다.");
+			}
+		}
+	
+	});
+	
+}
 	$(function() {
+		$("#submit").click(function(){
+			if(check){
+				$(this).submit();
+			}else{
+				alert("이메일 중복체크해주세요.");
+			}
+		})
+		
 		$("#testDatepicker").datepicker(
 				{
 					changeYear : true,

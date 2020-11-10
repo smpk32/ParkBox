@@ -10,6 +10,12 @@
 	]]>
 	</select>
 	
+	<select id="memCheck" parameterType="String" resultType="String">
+	<![CDATA[
+	select * from MEMBER where email = #{email};
+	]]>
+	</select>
+	
 	<insert id="addUser" parameterType="MemVo" >
 	<![CDATA[
 	INSERT INTO MEMBER(EMAIL,PW,NAME,PHONE,BIRTH,POINT,SIGNDATE,LASTLOG,STATUS)
@@ -26,4 +32,12 @@
 	)
 	]]>
 	</insert>
+	
+	<delete id="memDel" parameterType="String">
+	<![CDATA[
+	Delete from MEMBER where EMAIL = #{email};
+	]]>
+	</delete>
+	
+	
 </mapper>
